@@ -1,4 +1,4 @@
-# KONE TCoE - Playwright Test Automation Framework
+# Playwright Test Automation Framework
 
 A Page Object Model (POM) based Playwright framework with Allure reporting,
 reusable utilities, XRAY integration, and structured test organisation - scoped
