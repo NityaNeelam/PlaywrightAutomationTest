@@ -1,0 +1,31 @@
+{
+  "name": "kone-tcoe-playwright",
+  "version": "1.0.0",
+  "description": "KONE TCoE - Playwright Test Automation Framework (POM, Allure, XRAY) - KONE Studio onboarding",
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test && npm run allure:report",
+    "test:single": "playwright test",
+    "test:smoke": "playwright test tests/smoke_suite.spec.ts",
+    "test:headed": "playwright test --headed",
+    "test:chrome": "playwright test --project=chromium",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:report": "npm run allure:generate && npm run allure:open",
+    "allure:serve": "allure serve allure-results",
+    "encrypt": "ts-node utils/encrypt.ts",
+    "codegen": "playwright codegen https://distributors.kone.com/en/studio/tool/"
+  },
+  "keywords": ["playwright", "typescript", "pom", "allure", "xray", "kone"],
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.0",
+    "allure-commandline": "^2.30.0",
+    "allure-playwright": "^3.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
